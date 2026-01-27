@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "scheme": "Qedami",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "Qedami",
+    "slug": "Qedami",
+    "plugins": ["expo-font"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
