@@ -3,6 +3,10 @@
     "scheme": "Qedami",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
+    "statusBar": {
+      "barStyle": "auto",
+      "backgroundColor": "#00000000"
+    },
     "web": {
       "bundler": "metro"
     },
