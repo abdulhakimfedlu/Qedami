@@ -54,6 +54,12 @@ importers:
       '@gorhom/bottom-sheet':
         specifier: ^5
         version: 5.2.8(@types/react@19.1.17)(react-native-gesture-handler@2.30.0(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native-reanimated@4.1.6(@babel/core@7.28.6)(react-native-worklets@0.5.1(@babel/core@7.28.6)(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
+      '@hugeicons/core-free-icons':
+        specifier: ^3.1.1
+        version: 3.1.1
+      '@hugeicons/react-native':
+        specifier: ^1.0.11
+        version: 1.0.11(react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
       '@react-native-masked-view/masked-view':
         specifier: ^0.3.2
         version: 0.3.2(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -87,6 +93,9 @@ importers:
       expo-linking:
         specifier: ~8.0.8
         version: 8.0.11(expo@54.0.32)(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
+      expo-location:
+        specifier: ^19.0.8
+        version: 19.0.8(expo@54.0.32)
       expo-network:
         specifier: ~8.0.7
         version: 8.0.8(expo@54.0.32)(react@19.1.0)
@@ -150,6 +159,9 @@ importers:
       uniwind:
         specifier: ^1.2.2
         version: 1.2.7(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.18)
+      use-debounce:
+        specifier: ^10.1.0
+        version: 10.1.0(react@19.1.0)
       zod:
         specifier: 'catalog:'
         version: 4.3.6
@@ -222,7 +234,7 @@ importers:
         version: 17.2.3
       mongoose:
         specifier: ^8.14.0
-        version: 8.21.1
+        version: 8.22.0
       zod:
         specifier: 'catalog:'
         version: 4.3.6
@@ -1050,8 +1062,8 @@ packages:
   '@expo/ws-tunnel@1.0.6':
     resolution: {integrity: sha512-nDRbLmSrJar7abvUjp3smDwH8HcbZcoOEa5jVPUv9/9CajgmWw20JNRwTuBRzWIWIkEJDkz20GoNA+tSwUqk0Q==}
 
-  '@expo/xcpretty@4.3.2':
-    resolution: {integrity: sha512-ReZxZ8pdnoI3tP/dNnJdnmAk7uLT4FjsKDGW7YeDdvdOMz2XCQSmSCM9IWlrXuWtMF9zeSB6WJtEhCQ41gQOfw==}
+  '@expo/xcpretty@4.4.0':
+    resolution: {integrity: sha512-o2qDlTqJ606h4xR36H2zWTywmZ3v3842K6TU8Ik2n1mfW0S580VHlt3eItVYdLYz+klaPp7CXqanja8eASZjRw==}
     hasBin: true
 
   '@gorhom/bottom-sheet@5.2.8':
@@ -1074,6 +1086,16 @@ packages:
     peerDependencies:
       react: '*'
       react-native: '*'
+
+  '@hugeicons/core-free-icons@3.1.1':
+    resolution: {integrity: sha512-UpS2lUQFi5sKyJSWwM6rO+BnPLvVz1gsyCpPHeZyVuZqi89YH8ksliza4cwaODqKOZyeXmG8juo1ty4QtQofkg==}
+
+  '@hugeicons/react-native@1.0.11':
+    resolution: {integrity: sha512-HCUhHrFbL30ArN7tWV7+udnd1Qotu/eKcys63PELui3XVxP0DPPEvgFJqgbdig2afrLltroP7QCAdBNWOorWSg==}
+    peerDependencies:
+      react: '>=16.0.0'
+      react-native: '>=0.60.0'
+      react-native-svg: '>=12.0.0'
 
   '@isaacs/balanced-match@4.0.1':
     resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
@@ -2051,8 +2073,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  baseline-browser-mapping@2.9.18:
-    resolution: {integrity: sha512-e23vBV1ZLfjb9apvfPk4rHVu2ry6RIr2Wfs+O324okSidrX7pTAnEJPCh/O5BtRlr7QtZI7ktOP3vsqr7Z5XoA==}
+  baseline-browser-mapping@2.9.19:
+    resolution: {integrity: sha512-ipDqC8FrAl/76p2SSWKSI+H9tFwm7vYqXQrItCuiVPt26Km0jS+NzSsBWAaBusvSbQcfJG+JitdMm+wZAgTYqg==}
     hasBin: true
 
   better-opn@3.0.2:
@@ -2543,6 +2565,11 @@ packages:
       react: '*'
       react-native: '*'
 
+  expo-location@19.0.8:
+    resolution: {integrity: sha512-H/FI75VuJ1coodJbbMu82pf+Zjess8X8Xkiv9Bv58ZgPKS/2ztjC1YO1/XMcGz7+s9DrbLuMIw22dFuP4HqneA==}
+    peerDependencies:
+      expo: '*'
+
   expo-modules-autolinking@3.0.24:
     resolution: {integrity: sha512-TP+6HTwhL7orDvsz2VzauyQlXJcAWyU3ANsZ7JGL4DQu8XaZv/A41ZchbtAYLfozNA2Ya1Hzmhx65hXryBMjaQ==}
     hasBin: true
@@ -2675,10 +2702,6 @@ packages:
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
-
-  find-up@5.0.0:
-    resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
-    engines: {node: '>=10'}
 
   flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==}
@@ -3145,10 +3168,6 @@ packages:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
     engines: {node: '>=8'}
 
-  locate-path@6.0.0:
-    resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
-    engines: {node: '>=10'}
-
   lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
 
@@ -3353,8 +3372,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.21.1:
-    resolution: {integrity: sha512-1LhrVeHwiyAGxwSaYSq2uf32izQD+qoM2c8wq63W8MIsJBxKQDBnMkhJct55m0qqCsm2Maq8aPpIIfOHSYAqxg==}
+  mongoose@8.22.0:
+    resolution: {integrity: sha512-LKTPPqD3CVcSZJRzPcwKiSVYTmAvBZeVT0V34vUiqPEo9sBmOEg1y4TpDbUb90Zf2lO4N05ailQnKxiapCN08g==}
     engines: {node: '>=16.20.1'}
 
   mpath@0.9.0:
@@ -3484,10 +3503,6 @@ packages:
   p-locate@4.1.0:
     resolution: {integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==}
     engines: {node: '>=8'}
-
-  p-locate@5.0.0:
-    resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
-    engines: {node: '>=10'}
 
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
@@ -4117,8 +4132,8 @@ packages:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
-  tar@7.5.6:
-    resolution: {integrity: sha512-xqUeu2JAIJpXyvskvU3uvQW8PAmHrtXp2KDuMJwQqW8Sqq0CaZBAQ+dKS3RBXVhU4wC5NjAdKrmh84241gO9cA==}
+  tar@7.5.7:
+    resolution: {integrity: sha512-fov56fJiRuThVFXD6o6/Q354S7pnWMJIVlDBYijsTNx6jKSE4pvrDTs6lUnmGvNyfJwFQQwWy3owKz1ucIhveQ==}
     engines: {node: '>=18'}
 
   temp-dir@2.0.0:
@@ -4308,6 +4323,12 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  use-debounce@10.1.0:
+    resolution: {integrity: sha512-lu87Za35V3n/MyMoEpD5zJv0k7hCn0p+V/fK2kWD+3k2u3kOCwO593UArbczg1fhfs2rqPEnHpULJ3KmGdDzvg==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      react: '*'
 
   use-latest-callback@0.2.6:
     resolution: {integrity: sha512-FvRG9i1HSo0wagmX63Vrm8SnlUU3LMM3WyZkQ76RnslpBrX694AdG4A0zQBx2B3ZifFA0yv/BaEHGBnEax5rZg==}
@@ -5220,7 +5241,7 @@ snapshots:
       '@expo/schema-utils': 0.1.8
       '@expo/spawn-async': 1.7.2
       '@expo/ws-tunnel': 1.0.6
-      '@expo/xcpretty': 4.3.2
+      '@expo/xcpretty': 4.4.0
       '@react-native/dev-middleware': 0.81.5
       '@urql/core': 5.2.0
       '@urql/exchange-retry': 1.3.2(@urql/core@5.2.0)
@@ -5262,7 +5283,7 @@ snapshots:
       source-map-support: 0.5.21
       stacktrace-parser: 0.1.11
       structured-headers: 0.4.1
-      tar: 7.5.6
+      tar: 7.5.7
       terminal-link: 2.1.1
       undici: 6.23.0
       wrap-ansi: 7.0.0
@@ -5494,11 +5515,10 @@ snapshots:
 
   '@expo/ws-tunnel@1.0.6': {}
 
-  '@expo/xcpretty@4.3.2':
+  '@expo/xcpretty@4.4.0':
     dependencies:
-      '@babel/code-frame': 7.10.4
+      '@babel/code-frame': 7.28.6
       chalk: 4.1.2
-      find-up: 5.0.0
       js-yaml: 4.1.1
 
   '@gorhom/bottom-sheet@5.2.8(@types/react@19.1.17)(react-native-gesture-handler@2.30.0(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native-reanimated@4.1.6(@babel/core@7.28.6)(react-native-worklets@0.5.1(@babel/core@7.28.6)(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)':
@@ -5517,6 +5537,14 @@ snapshots:
       nanoid: 3.3.11
       react: 19.1.0
       react-native: 0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0)
+
+  '@hugeicons/core-free-icons@3.1.1': {}
+
+  '@hugeicons/react-native@1.0.11(react-native-svg@15.12.1(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
+      react-native: 0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0)
+      react-native-svg: 15.12.1(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
 
   '@isaacs/balanced-match@4.0.1': {}
 
@@ -6524,7 +6552,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  baseline-browser-mapping@2.9.18: {}
+  baseline-browser-mapping@2.9.19: {}
 
   better-opn@3.0.2:
     dependencies:
@@ -6577,7 +6605,7 @@ snapshots:
 
   browserslist@4.28.1:
     dependencies:
-      baseline-browser-mapping: 2.9.18
+      baseline-browser-mapping: 2.9.19
       caniuse-lite: 1.0.30001766
       electron-to-chromium: 1.5.279
       node-releases: 2.0.27
@@ -6996,6 +7024,10 @@ snapshots:
       - expo
       - supports-color
 
+  expo-location@19.0.8(expo@54.0.32):
+    dependencies:
+      expo: 54.0.32(@babel/core@7.28.6)(@expo/metro-runtime@6.1.2)(expo-router@6.0.22)(react-native@0.81.5(@babel/core@7.28.6)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
+
   expo-modules-autolinking@3.0.24:
     dependencies:
       '@expo/spawn-async': 1.7.2
@@ -7199,11 +7231,6 @@ snapshots:
   find-up@4.1.0:
     dependencies:
       locate-path: 5.0.0
-      path-exists: 4.0.0
-
-  find-up@5.0.0:
-    dependencies:
-      locate-path: 6.0.0
       path-exists: 4.0.0
 
   flow-enums-runtime@0.0.6: {}
@@ -7619,10 +7646,6 @@ snapshots:
     dependencies:
       p-locate: 4.1.0
 
-  locate-path@6.0.0:
-    dependencies:
-      p-locate: 5.0.0
-
   lodash.debounce@4.0.8: {}
 
   lodash.throttle@4.1.1: {}
@@ -7898,7 +7921,7 @@ snapshots:
       bson: 6.10.4
       mongodb-connection-string-url: 3.0.2
 
-  mongoose@8.21.1:
+  mongoose@8.22.0:
     dependencies:
       bson: 6.10.4
       kareem: 2.6.3
@@ -8029,10 +8052,6 @@ snapshots:
   p-locate@4.1.0:
     dependencies:
       p-limit: 2.3.0
-
-  p-locate@5.0.0:
-    dependencies:
-      p-limit: 3.1.0
 
   p-try@2.2.0: {}
 
@@ -8721,7 +8740,7 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  tar@7.5.6:
+  tar@7.5.7:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
@@ -8889,6 +8908,10 @@ snapshots:
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.1.17
+
+  use-debounce@10.1.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   use-latest-callback@0.2.6(react@19.1.0):
     dependencies:

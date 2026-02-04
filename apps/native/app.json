@@ -12,10 +12,15 @@
     },
     "name": "Qedami",
     "slug": "Qedami",
-    "plugins": ["expo-font"],
+    "plugins": [
+      "expo-font"
+    ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "android": {
+      "package": "com.Qedami"
     }
   }
 }

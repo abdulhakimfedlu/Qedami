@@ -23,7 +23,7 @@ export default function Layout() {
         <KeyboardProvider>
           <AppThemeProvider>
             <HeroUINativeProvider>
-              <StatusBar translucent={true} style="dark" />
+              <StatusBar translucent={true} style="auto" />
               <StackLayout />
             </HeroUINativeProvider>
           </AppThemeProvider>
