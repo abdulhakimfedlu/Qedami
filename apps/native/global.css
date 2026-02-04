@@ -3,3 +3,51 @@
 @import "heroui-native/styles";
 
 @source './node_modules/heroui-native/lib';
+
+/* Qedami Color Scheme - matching v0 design */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #F9FAFB;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #111827;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #10B981;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #10B981;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: #111827;
+  --foreground: #F9FAFB;
+  --card: #1F2937;
+  --card-foreground: #F9FAFB;
+  --popover: #1F2937;
+  --popover-foreground: #F9FAFB;
+  --primary: #F9FAFB;
+  --primary-foreground: #111827;
+  --secondary: #374151;
+  --secondary-foreground: #F9FAFB;
+  --muted: #374151;
+  --muted-foreground: #9CA3AF;
+  --accent: #10B981;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #374151;
+  --input: #374151;
+  --ring: #10B981;
+}
