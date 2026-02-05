@@ -9,7 +9,9 @@
       "default": "./src/*.ts"
     }
   },
-  "scripts": {},
+  "scripts": {
+    "seed": "export $(grep -v '^#' ../../.env | xargs) && mongosh \"$DATABASE_URL\" ../../seed.js"
+  },
   "dependencies": {
     "@Qedami/env": "workspace:*",
     "dotenv": "catalog:",
@@ -18,6 +20,7 @@
   },
   "devDependencies": {
     "@Qedami/config": "workspace:*",
+    "tsx": "^4.21.0",
     "typescript": "catalog:"
   }
 }

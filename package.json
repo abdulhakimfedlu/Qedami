@@ -12,11 +12,13 @@
     "check-types": "pnpm -r check-types",
     "dev:native": "pnpm --filter native dev",
     "dev:web": "pnpm --filter web dev",
-    "dev:server": "pnpm --filter server dev"
+    "dev:server": "pnpm --filter server dev",
+    "db:seed": "pnpm --filter @Qedami/db seed"
   },
   "dependencies": {
     "@Qedami/env": "workspace:*",
     "dotenv": "catalog:",
+    "esbuild": "0.25.5",
     "zod": "catalog:"
   },
   "devDependencies": {
@@ -24,5 +26,10 @@
     "@types/node": "^22.13.14",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.28.2",
+  "pnpm": {
+    "overrides": {
+      "esbuild": "0.25.5"
+    }
+  }
 }

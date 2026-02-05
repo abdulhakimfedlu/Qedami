@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "dotenv": "catalog:",
     "express": "^5.1.0",
+    "mongoose": "^8.14.0",
     "zod": "catalog:"
   },
   "devDependencies": {
