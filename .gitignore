@@ -50,5 +50,5 @@ tmp
 temp
 
 # Agent and skill files
-AGENTS.md
 .agents/
+.docs/
