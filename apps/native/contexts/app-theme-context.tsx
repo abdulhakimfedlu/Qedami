@@ -1,46 +1,38 @@
-import React, { createContext, useCallback, useContext, useMemo } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useMemo } from "react";
 import { Uniwind, useUniwind } from "uniwind";
-
-type ThemeName = "light" | "dark";
+import { Platform } from "react-native";
 
 type AppThemeContextType = {
-  currentTheme: string;
   isLight: boolean;
-  isDark: boolean;
-  setTheme: (theme: ThemeName) => void;
-  toggleTheme: () => void;
 };
 
 const AppThemeContext = createContext<AppThemeContextType | undefined>(undefined);
 
+// Force light mode globally
+Uniwind.setTheme("light");
+
 export const AppThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const { theme } = useUniwind();
 
-  const isLight = useMemo(() => {
-    return theme === "light";
-  }, [theme]);
+  // Apply light mode only (no dark mode support)
+  useEffect(() => {
+    // Always ensure light mode is set
+    Uniwind.setTheme("light");
 
-  const isDark = useMemo(() => {
-    return theme === "dark";
-  }, [theme]);
-
-  const setTheme = useCallback((newTheme: ThemeName) => {
-    Uniwind.setTheme(newTheme);
-  }, []);
-
-  const toggleTheme = useCallback(() => {
-    Uniwind.setTheme(theme === "light" ? "dark" : "light");
-  }, [theme]);
+    // Apply light class to document body for web
+    if (Platform.OS === "web" && typeof document !== "undefined") {
+      document.documentElement.classList.remove("dark");
+      document.body.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      document.body.classList.add("light");
+    }
+  });
 
   const value = useMemo(
     () => ({
-      currentTheme: theme,
-      isLight,
-      isDark,
-      setTheme,
-      toggleTheme,
+      isLight: true,
     }),
-    [theme, isLight, isDark, setTheme, toggleTheme],
+    [],
   );
 
   return <AppThemeContext.Provider value={value}>{children}</AppThemeContext.Provider>;
