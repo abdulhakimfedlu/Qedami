@@ -25,23 +25,23 @@ export interface IUser extends Document {
 const UserSchema = new Schema<IUser>(
   {
     name: { type: String, required: true, trim: true },
-    email: { 
-      type: String, 
-      required: true, 
-      unique: true, 
+    email: {
+      type: String,
+      required: true,
+      unique: true,
       lowercase: true,
       trim: true,
       index: true
     },
     passwordHash: { type: String, required: true },
     profile: {
-      preferredLanguage: { 
-        type: String, 
-        enum: ["en", "am"], 
-        default: "en" 
+      preferredLanguage: {
+        type: String,
+        enum: ["en", "am"],
+        default: "en"
       },
       savedLocation: {
-        type: { type: String, default: "Point", enum: ["Point"] },
+        type: { type: String, enum: ["Point"] },
         coordinates: { type: [Number] },
       },
     },
@@ -54,10 +54,10 @@ const UserSchema = new Schema<IUser>(
     isActive: { type: Boolean, default: true },
     lastLoginAt: Date,
   },
-  { 
+  {
     timestamps: true,
     toJSON: {
-      transform: function(_doc, ret) {
+      transform: function (_doc, ret) {
         delete (ret as any).passwordHash;
         return ret;
       }

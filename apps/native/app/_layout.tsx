@@ -4,6 +4,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
 
 import { AppThemeProvider } from "@/contexts/app-theme-context";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 import { useLocationSync } from "@/hooks/useLocationSync";
 
@@ -30,7 +31,9 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <KeyboardProvider>
         <AppThemeProvider>
-          <StackLayout />
+          <AuthProvider>
+            <StackLayout />
+          </AuthProvider>
         </AppThemeProvider>
       </KeyboardProvider>
     </GestureHandlerRootView>

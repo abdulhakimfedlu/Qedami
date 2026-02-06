@@ -4,6 +4,7 @@ import cors from "cors";
 import express from "express";
 
 import healthRoutes from "./routes/health.js";
+import authRoutes from "./routes/auth.js";
 
 import suggestionsRoutes from "./routes/suggestions.js";
 import searchRoutes from "./routes/search.js";
@@ -26,6 +27,7 @@ app.use(
 app.use(express.json());
 
 app.use(healthRoutes);
+app.use(authRoutes);
 
 app.use(suggestionsRoutes);
 app.use(searchRoutes);

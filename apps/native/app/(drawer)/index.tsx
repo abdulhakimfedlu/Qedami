@@ -1,17 +1,18 @@
 import React from "react";
-import { Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView, TouchableOpacity } from "react-native";
 import { Container } from "@/components/container";
 import { SearchInput } from "@/components/SearchInput";
 import { SuggestionsChips } from "@/components/SuggestionsChips";
 import { useLocationSync } from "@/hooks/useLocationSync";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Home() {
   const { userLocation, locationPermission } = useLocationSync();
+  const { signOut } = useAuth();
 
   return (
     <Container className="flex-1">
       <ScrollView className="flex-1 p-4">
-        {/* Header */}
         <View className="py-6 mb-6">
           <Text className="text-3xl font-bold text-gray-900 tracking-tight">
             Qedami Scout
@@ -19,6 +20,12 @@ export default function Home() {
           <Text className="text-gray-600 text-base mt-2">
             Find government services and document requirements
           </Text>
+          <TouchableOpacity
+            onPress={signOut}
+            className="mt-4 self-start bg-red-100 px-4 py-2 rounded-lg border border-red-200"
+          >
+            <Text className="text-red-700 font-medium">Log Out</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Search Input */}
@@ -42,11 +49,11 @@ export default function Home() {
             How it works
           </Text>
           <Text className="text-blue-800 text-sm leading-5">
-            Search for any government service to find exact document requirements, 
+            Search for any government service to find exact document requirements,
             office locations, and operating hours. Get personalized results based on your location.
           </Text>
         </View>
       </ScrollView>
-    </Container>
+    </Container >
   );
 }
