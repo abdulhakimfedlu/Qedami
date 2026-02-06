@@ -43,11 +43,10 @@ router.get("/api/v1/scout/categories", async (_req, res) => {
 
     const categories = categoryCounts.map((cat) => ({
       id: cat._id,
-      ...CATEGORY_METADATA[cat._id],
-      serviceCount: cat.count,
+      name: CATEGORY_METADATA[cat._id]?.name || { en: cat._id, am: cat._id },
     }));
 
-    res.json(createSuccessResponse({ categories }));
+    res.json(createSuccessResponse(categories));
   } catch (error) {
     console.error("Categories error:", error);
     res.status(500).json(createErrorResponse("DATABASE_ERROR", "Failed to fetch categories"));

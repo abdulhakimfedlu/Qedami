@@ -18,3 +18,4 @@ export function getDatabase() {
 
 export { Service, type IService } from "./models/Service.js";
 export { Office, type IOffice, type IOffering } from "./models/Office.js";
+export { User, type IUser } from "./models/User.js";

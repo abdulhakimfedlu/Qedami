@@ -12,16 +12,21 @@
   "dependencies": {
     "@Qedami/db": "workspace:*",
     "@Qedami/env": "workspace:*",
+    "bcryptjs": "^3.0.3",
+    "better-auth": "^1.4.18",
     "cors": "^2.8.5",
     "dotenv": "catalog:",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.14.0",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@Qedami/config": "workspace:*",
+    "@types/bcryptjs": "^3.0.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^22.13.14",
     "tsdown": "^0.16.5",
     "tsx": "^4.19.2",

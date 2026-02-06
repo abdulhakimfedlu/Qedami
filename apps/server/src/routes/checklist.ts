@@ -79,7 +79,7 @@ router.get("/api/v1/scout/checklist", async (req, res) => {
         },
         service: {
           name: service.identifiers,
-          processingTime: service.estimatedProcessingTime,
+          processingNotes: service.processingNotes,
           fees: offering.fees,
         },
         checklist: {
