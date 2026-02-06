@@ -3,25 +3,15 @@
     "scheme": "Qedami",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
-    "statusBar": {
-      "barStyle": "auto",
-      "backgroundColor": "#00000000"
-    },
     "web": {
-      "bundler": "metro",
-      "output": "server"
+      "bundler": "metro"
     },
     "name": "Qedami",
     "slug": "Qedami",
-    "plugins": [
-      "expo-font"
-    ],
+    "plugins": ["expo-font"],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    },
-    "android": {
-      "package": "com.Qedami"
     }
   }
 }
