@@ -4,7 +4,7 @@ import cors from "cors";
 import express from "express";
 
 import healthRoutes from "./routes/health.js";
-import authRoutes from "./routes/auth.js";
+
 import suggestionsRoutes from "./routes/suggestions.js";
 import searchRoutes from "./routes/search.js";
 import officesRoutes from "./routes/offices.js";
@@ -26,7 +26,7 @@ app.use(
 app.use(express.json());
 
 app.use(healthRoutes);
-app.use(authRoutes);
+
 app.use(suggestionsRoutes);
 app.use(searchRoutes);
 app.use(officesRoutes);
@@ -45,13 +45,10 @@ async function start() {
     app.listen(port, '0.0.0.0', () => {
       console.log(`Server is running on http://0.0.0.0:${port}`);
       console.log(`Local access: http://localhost:${port}`);
-      console.log(`Network access: http://192.168.1.4:${port}`);
+      console.log(`Network access: http://10.1.41.94:${port}`);
       console.log("API endpoints:");
       console.log("  GET /api/v1/health");
-      console.log("  POST /api/v1/auth/signup");
-      console.log("  POST /api/v1/auth/signin");
-      console.log("  GET /api/v1/auth/me");
-      console.log("  POST /api/v1/auth/signout");
+
       console.log("  GET /api/v1/scout/suggestions");
       console.log("  GET /api/v1/scout/search");
       console.log("  GET /api/v1/scout/offices/:officeId");

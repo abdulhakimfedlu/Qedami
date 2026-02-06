@@ -5,9 +5,10 @@ import { SearchResult } from '../store/servicesState';
 interface ResultCardProps {
     result: SearchResult;
     onPress: () => void;
+    onDetailPress?: () => void;
 }
 
-export const ResultCard: React.FC<ResultCardProps> = ({ result, onPress }) => {
+export const ResultCard: React.FC<ResultCardProps> = ({ result, onPress, onDetailPress }) => {
     const { office, matchedService, proximity } = result;
 
     const getDistanceColor = (category?: string) => {
@@ -95,6 +96,18 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onPress }) => {
                     </Text>
                 </View>
             )}
+
+            {/* See Detail Button */}
+            <TouchableOpacity
+                onPress={(e) => {
+                    e.stopPropagation();
+                    if (onDetailPress) onDetailPress();
+                    else onPress();
+                }}
+                className="mt-3 bg-blue-50 py-2 rounded-lg border border-blue-100 items-center active:bg-blue-100"
+            >
+                <Text className="text-blue-700 font-semibold">See Details</Text>
+            </TouchableOpacity>
         </TouchableOpacity>
     );
 };

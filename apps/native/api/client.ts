@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_SERVER_URL || 'http://localhost:8081';
+const API_BASE_URL = process.env.EXPO_PUBLIC_SERVER_URL || 'http://10.1.41.94:8081';
 
 export const apiClient = axios.create({
   baseURL: `${API_BASE_URL}/api/v1`,

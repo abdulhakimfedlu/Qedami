@@ -14,7 +14,7 @@ const SearchScreen = observer(() => {
     category?: string;
     nearby?: string;
   }>();
-  
+
   const router = useRouter();
   const { searchServices, searchState } = useSearch();
   const { requestLocationPermission, locationPermission } = useLocationSync();
@@ -115,6 +115,15 @@ const SearchScreen = observer(() => {
             key={`${result.office._id}-${result.matchedService._id}-${index}`}
             result={result}
             onPress={() => handleResultPress(result)}
+            onDetailPress={() => {
+              router.push({
+                pathname: '/detail',
+                params: {
+                  officeId: result.office._id,
+                  serviceId: result.matchedService._id
+                }
+              });
+            }}
           />
         ))}
 
